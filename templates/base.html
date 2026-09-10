@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="{% url 'inicio:base' %}">Inicio</a></li>
-         
-        </ul>
-    </nav>
-<main>
-     <!-- Contenido específico de cada página -->
-    {% block content %}
+    <header>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio:index'%}">Inicio</a></li>
+                <li><a href="{% url 'app2:v1'%}">v1</a></li>
+                <li><a href="{% url 'app2:v2'%}">v2</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <main>
+        <!-- Contenido específico de cada página -->
+        {% block content %}
 
 
-    {% endblock %}
-</main>
-   
+        {% endblock %}
+    </main>
+    
 
-    <!-- Pie de página -->
+        <!-- Pie de página -->
     <footer>
         <p>&copy; DJANGO PROJECT TEMPLATES 2026</p>
     </footer>
